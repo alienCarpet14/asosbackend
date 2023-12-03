@@ -1,16 +1,8 @@
-app.js - backend for login and register API <br>
-ws.js - WS server for yjs
+# How to run this project
 
+1. Run `npm i` in terminal to install dependencies
+2. Run `node ws.js` to start Websocket server
 
-login and register api consumes JSON
-{
-"username": "username",
-"password": "password"
-}
-
-run instructions:
-1. edit port and IP in config.js - see configExample.js
-2. edit database_credentials.js - see database_credentialsExample.js
-3. install postgresql 
-4. node ws.js
-5. node app.js
+# Check also
+1. edit port and IP in `config.js` - according to configuration template `configExample.js`
+2. edit `const persistenceDir` in `ws.js` to change directory of the LevelDB database
