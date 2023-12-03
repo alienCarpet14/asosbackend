@@ -17,3 +17,4 @@ package-lock.json
 
 database_credentials.js
 config.js
+/persistence/*
