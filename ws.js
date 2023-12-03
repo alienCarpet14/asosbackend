@@ -11,6 +11,7 @@ const map = require('lib0/dist/map.cjs');
 const debounce = require('lodash.debounce');
 const callbackHandler = require('./callback.js').callbackHandler;
 const isCallbackSet = require('./callback.js').isCallbackSet;
+const config = require('./config');
 
 const CALLBACK_DEBOUNCE_WAIT = parseInt(process.env.CALLBACK_DEBOUNCE_WAIT) || 2000;
 const CALLBACK_DEBOUNCE_MAXWAIT = parseInt(process.env.CALLBACK_DEBOUNCE_MAXWAIT) || 10000;
@@ -224,8 +225,8 @@ exports.setupWSConnection = (conn, req, { docName = req.url.slice(1).split('?')[
     }
 };
 
-const host = process.env.HOST || '0.0.0.0';
-const port = process.env.PORT || 4444;
+const host = process.env.HOST ||  config.server.host;
+const port = process.env.PORT || config.server.port;
 
 const server = http.createServer((request, response) => {
     response.writeHead(200, {'Content-Type': 'text/plain'});

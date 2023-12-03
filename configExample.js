@@ -1,8 +1,8 @@
-// config.js  - your WS server for yjs
-export default {
+// config.js
+module.exports = {
     server: {
-        host: '0.0.0.0',  // Change this to your desired host
-        port: '9999',         // Change this to your desired port
+        host: '0.0.0.0',
+        port: 4444,
     },
     // Other configuration options, if needed
 };
