@@ -16,5 +16,5 @@ package-lock.json
 *.swp
 
 database_credentials.js
-config.js
+#config.js
 /persistence/*
